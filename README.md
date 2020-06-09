@@ -26,7 +26,10 @@ function gitpush() {
 
     if [ $ERROR == 0 ]; then
         git commit -a -m "$COMMIT_MSG"
-        git push
+        ORIGIN=`git remote`
+        if [ $ORIGIN ]; then
+            git push $ORIGIN
+        fi
     fi
 }
 ```
