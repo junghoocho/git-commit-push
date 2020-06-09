@@ -21,9 +21,10 @@ function git_commmit_push() {
           COMMIT_MSG="$OPTARG"
           ;;
         h | *)
-          echo "Usage: gitpush [-a file] [-m commit_message]"
-          echo "  -a add the file or directory to the respository"
-          echo '  -m use the provided commit message. Default is "Update"'
+          echo "Usage: git_commit_push [-a file] [-m commit_message]"
+          echo "  Commit all changes in the working tree to the local repo and push them to remote origin repo"
+          echo '  -a "git add" the file before commit'
+          echo '  -m use the provided commit message instead of the default message "Update"'
           ERROR=1
           ;;
       esac
