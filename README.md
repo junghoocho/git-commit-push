@@ -34,9 +34,9 @@ function git_commmit_push() {
 
     if [ $ERROR == 0 ]; then
         git commit -a -m "$COMMIT_MSG"
-        ORIGIN=$(git remote | grep "origin")
+        ORIGIN=$(git remote)
         if [ $ORIGIN ]; then
-            git push $ORIGIN
+            git push
         fi
     fi
 }
